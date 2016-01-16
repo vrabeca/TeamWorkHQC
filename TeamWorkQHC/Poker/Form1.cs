@@ -110,10 +110,10 @@ namespace Poker
             bool check = false;
             Bitmap backImage = new Bitmap("Assets\\Back\\Back.png");
             int horizontal = 580, vertical = 480;
-            Random r = new Random();
+            Random randomGenerator = new Random();
             for (i = ImgLocation.Length; i > 0; i--)
             {
-                int j = r.Next(i);
+                int j = randomGenerator.Next(i);
                 var k = ImgLocation[j];
                 ImgLocation[j] = ImgLocation[i - 1];
                 ImgLocation[i - 1] = k;
